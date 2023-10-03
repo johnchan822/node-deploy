@@ -17,6 +17,8 @@ app.get("/test", (req, res) => {
 app.post("/getBooks", async (req, res) => {
   try {
     let ISBN = req.body.ISBN;
+
+    console.log(ISBN);
     let data = await getBookData(ISBN);
     if (ISBN.length == 13) {
       if (data) {
