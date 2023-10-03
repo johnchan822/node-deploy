@@ -16,7 +16,7 @@ app.get("/test", (req, res) => {
 
 app.post("/getBooks", async (req, res) => {
   try {
-    let ISBN = req.body.ISBN;
+    let ISBN = 9786267043196;
 
     console.log(ISBN);
     let data = await getBookData(ISBN);
